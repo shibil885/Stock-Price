@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/mydatabase";
+const MONGO_URI = "mongodb://localhost:27017/stock-price";
 
 export const connectDB = async () => {
   try {
     await mongoose.connect(MONGO_URI, {
-      dbName: "mydatabase",
+      dbName: "stock-price",
     });
     console.log("✅ MongoDB Connected");
   } catch (error) {
